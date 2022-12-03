@@ -1,5 +1,8 @@
 <header id="banner">
     <h2><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://www.linkedin.com/in/ivanferdelja/" target="_blank"><img src="/linkedin.png" alt="HTML tutorial" style="width:25px"></a>
+    <br>{{ .Site.Params.Description }}<br>
     <nav>
         <ul>
             {{ range .Site.Menus.main.ByWeight -}}
@@ -9,4 +12,5 @@
             {{- end }}
         </ul>
     </nav>
+    {{ partial "seo_schema" . }}
 </header>
